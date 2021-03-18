@@ -58,6 +58,20 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('siteId', $value);
     }
 
+
+	public function setScpTransactionReference($value)
+    {
+        return $this->setParameter('scpTransactionReference', $value);        
+    }
+
+	public function getScpTransactionReference()
+    {
+        return $this->getParameter('scpTransactionReference');        
+    }	
+
+
+	
+
     /**
      * Override {@see AbstractRequest::setItems()} to provide additional attributes
      */

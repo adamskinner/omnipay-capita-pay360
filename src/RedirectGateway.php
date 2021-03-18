@@ -24,6 +24,7 @@ class RedirectGateway extends AbstractGateway
             'hmacKeyId' => '',
             'hmacKey' => '',
             'testMode' => false,
+			'scpReference' => '',
         );
     }
 
@@ -66,6 +67,17 @@ class RedirectGateway extends AbstractGateway
     {
         return $this->setParameter('hmacKey', $value);
     }
+
+	public function setScpTransactionReference($value)
+    {
+        return $this->setParameter('scpTransactionReference', $value);        
+    }
+
+	public function getScpTransactionReference()
+    {
+        return $this->getParameter('scpTransactionReference');        
+    }	
+
 
     public function purchase(array $parameters = array())
     {

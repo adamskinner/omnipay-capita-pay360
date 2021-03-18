@@ -11,6 +11,8 @@ class CompletePurchaseRequest extends PurchaseRequest
 {
     public function getData()
     {
+
+
         $timeStamp = gmdate("YmdHis");
         $uniqueReference = uniqid('PB');
         $subjectType = 'CapitaPortal';
@@ -45,7 +47,7 @@ class CompletePurchaseRequest extends PurchaseRequest
                 )
             ),
             'siteId' => $this->getSiteId(),
-            'scpReference' => $this->getTransactionReference()
+            'scpReference' => $this->getScpTransactionReference(),
         );
         return $data;
     }
