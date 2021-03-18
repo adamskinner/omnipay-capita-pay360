@@ -2,6 +2,14 @@
 
 **Capita Pay360 driver for the Omnipay PHP payment processing library**
 
+
+Changed to allow scp reference to be set on completePurchase
+
+	$gateway->setScpTransactionReference(XXXXXXXXXXX);
+    $response = $gateway->completePurchase()->send();
+
+
+
 [![Build Status](https://travis-ci.org/PatronBase/omnipay-capita-pay360.png?branch=master)](https://travis-ci.org/PatronBase/omnipay-capita-pay360)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/PatronBase/omnipay-capita-pay360.svg?style=flat)](https://scrutinizer-ci.com/g/PatronBase/omnipay-capita-pay360/code-structure)
 [![Code Quality](https://img.shields.io/scrutinizer/g/PatronBase/omnipay-capita-pay360.svg?style=flat)](https://scrutinizer-ci.com/g/PatronBase/omnipay-capita-pay360/?branch=master)
